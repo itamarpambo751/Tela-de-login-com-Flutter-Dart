@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -12,21 +10,21 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(top: 60, left: 24, right: 24),
+          padding: const EdgeInsets.only(top: 60, left: 24, right: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Sign Up to Misterminds",
                 style: TextStyle(
                   fontSize: 19,
                   fontWeight: FontWeight.w700
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Wrap(
                   children: [
@@ -48,6 +46,87 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 )
               ),
+              const SizedBox(height: 24,),
+              const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0)                    
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0)
+                  ),
+                  filled: true,
+                  fillColor: Color(0xFFC6C6C6),
+                  hintText: "First Name",
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14)
+                )
+              ),
+              const SizedBox(height: 24,),
+              const TextField(
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0)                    
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0)
+                  ),
+                  filled: true,
+                  fillColor: Color(0xFFC6C6C6),
+                  hintText: "Email",
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14)
+                )
+              ),
+              const SizedBox(height: 24,),
+              const TextField(
+                keyboardType: TextInputType.visiblePassword,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0)                    
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0)
+                  ),
+                  filled: true,
+                  fillColor: Color(0xFFC6C6C6),
+                  hintText: "Password",
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14)
+                )
+              ),
+              const SizedBox(height: 24,),
+              const TextField(
+                keyboardType: TextInputType.visiblePassword,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0)                    
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                    borderSide: BorderSide(color: Colors.transparent, width: 0)
+                  ),
+                  filled: true,
+                  fillColor: Color(0xFFC6C6C6),
+                  hintText: "Confirm Password",
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14)
+                )
+              ),
+              const SizedBox(height: 24,),
+              SizedBox.expand(
+                child: TextButton(
+                  onPressed: () {}, 
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.blueAccent)
+                  ),
+                  child: const Text("Create Account"),
+                ),
+              )
             ],
           ),
         ),
