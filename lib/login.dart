@@ -28,16 +28,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: 10),
-                child: Row(
+                child: Wrap(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 5), 
-                      child: Text(
-                        "Already have an account?",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black26
-                        ),
+                    Text(
+                      "Already have an account?",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black26
                       ),
                     ),
                     Text(
@@ -49,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     )
                   ],
-                ),
+                )
               ),
             ],
           ),
